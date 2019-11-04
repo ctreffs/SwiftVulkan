@@ -1,4 +1,4 @@
-module CVulkan [system] {
+module Vulkan [system] {
   header "shims.h"
   link "vulkan"
   export *
