@@ -1,6 +1,9 @@
 #ifndef Vulkan_shims_h
 #define Vulkan_shims_h
 
+#ifdef __APPLE__
+//#include "/usr/local/include/vulkan/vulkan.h"
+#else
 #include <vulkan/vulkan.h>
 #include <vulkan/vk_platform.h>
 //#include <vulkan/vk_icd.h>
@@ -19,5 +22,9 @@
 //#include <vulkan/vulkan_xcb.h>
 //#include <vulkan/vulkan_xlib.h>
 //#include <vulkan/vulkan_xlib_xrandr.h>
+#endif
+
 
 #endif
+
+

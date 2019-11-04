@@ -4,7 +4,10 @@ import XCTest
 #endif
 
 final class VulkanTests: XCTestCase {
-    func testFunction() {
-        XCTAssertNotNil(VkPhysicalDeviceProperties())
+    func testVulkanAPIAvailablility() {
+        #if canImport(Vulkan)
+        XCTAssertNotNil(VkApplicationInfo.self)
+        XCTAssertNotNil(VkPhysicalDeviceFeatures.self)
+        #endif
     }
 }

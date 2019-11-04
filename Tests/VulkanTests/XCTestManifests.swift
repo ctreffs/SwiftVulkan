@@ -6,7 +6,7 @@ extension VulkanTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__VulkanTests = [
-        ("testFunction", testFunction)
+        ("testVulkanAPIAvailablility", testVulkanAPIAvailablility)
     ]
 }
 
