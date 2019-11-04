@@ -1,0 +1,5 @@
+module CVulkan [system] {
+  header "shims.h"
+  link "vulkan"
+  export *
+}
