@@ -6,6 +6,10 @@ lintErrorOnly:
 	@swiftlint autocorrect --format --quiet
 	@swiftlint lint --quiet | grep error
 
+copyVulkanPkgConfig:
+	cp vulkan.pc /usr/local/lib/pkgconfig/vulkan.pc
+	pkg-config --libs --cflags vulkan
+
 genLinuxTests:
 	swift test --generate-linuxmain
 	swiftlint autocorrect --format --path Tests/
