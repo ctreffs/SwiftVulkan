@@ -1,5 +1,5 @@
 import XCTest
-@testable import SwiftVulkan
+@testable import Vulkan
 
 final class SwiftVulkanTests: XCTestCase {
 }
