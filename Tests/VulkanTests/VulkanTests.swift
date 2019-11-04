@@ -5,6 +5,6 @@ import XCTest
 
 final class VulkanTests: XCTestCase {
     func testFunction() {
-
+        XCTAssertNotNil(VkPhysicalDeviceProperties())
     }
 }
