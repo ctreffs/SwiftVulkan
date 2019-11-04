@@ -4,12 +4,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "SwiftVulkan",
+    name: "Vulkan",
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
         .library(
-            name: "SwiftVulkan",
-            targets: ["SwiftVulkan"])
+            name: "Vulkan",
+            targets: ["Vulkan"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -22,10 +22,10 @@ let package = Package(
                         .apt(["libvulkan-dev", "libvulkan1", "vulkan-utils"]) // https://packages.ubuntu.com/source/vulkan
         ]),
         .target(
-            name: "SwiftVulkan",
+            name: "Vulkan",
             dependencies: ["CVulkan"]),
         .testTarget(
             name: "SwiftVulkanTests",
-            dependencies: ["SwiftVulkan"])
+            dependencies: ["Vulkan"])
     ]
 )
