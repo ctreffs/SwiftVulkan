@@ -10,8 +10,8 @@ But there is a cask, that works great. <https://github.com/Homebrew/homebrew-cas
 Install vulkan cask
 
 ```bash
-brew cask install apenngrace/vulkan/vulkan-sdk
-brew cask info vulkan-sdk
+brew install --cask apenngrace/vulkan/vulkan-sdk
+brew info --cask vulkan-sdk
 which -a vulkaninfo
 ```
 
