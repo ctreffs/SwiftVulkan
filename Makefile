@@ -14,8 +14,13 @@ genLinuxTests:
 	swift test --generate-linuxmain
 	swiftlint autocorrect --format --path Tests/
 
-test: genLinuxTests
-	swift test
+.PHONE: test
+test:
+	swift test --skip-update --parallel --verbose
+
+.PHONE: build-release
+build-release:
+	swift build -c release
 
 clean:
 	swift package reset
