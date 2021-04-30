@@ -21,7 +21,7 @@ build-release:
 	swift build -c release
 
 .PHONY: precommit
-precommit: lint genLinuxTests
+precommit: lint-fix genLinuxTests
 
 .PHONY: testReadme
 testReadme:
