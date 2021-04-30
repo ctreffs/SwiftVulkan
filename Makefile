@@ -14,7 +14,7 @@ genLinuxTests:
 
 .PHONY: test
 test:
-	swift test --skip-update --parallel --verbose
+	swift test --skip-update --parallel
 
 .PHONY: build-release
 build-release:

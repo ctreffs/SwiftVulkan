@@ -71,10 +71,8 @@ jobs:
       - name: Install dependencies
         run: |
           apt-get update -qq 
-          apt-get install -y pkg-config
           apt-get install -y libvulkan-dev
-          apt-get install -y libvulkan1 
-          apt-get install -y mesa-vulkan-drivers
+          apt-get install -y libvulkan1
           apt-get install -y vulkan-utils
       - name: Test
         run: make test
