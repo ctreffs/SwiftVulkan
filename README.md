@@ -1,6 +1,6 @@
 # SwiftVulkan
 
-A description of this package.
+[![CI](https://github.com/ctreffs/SwiftVulkan/actions/workflows/ci.yml/badge.svg)](https://github.com/ctreffs/SwiftVulkan/actions/workflows/ci.yml)
 
 ### macOS: Install vulkan + setup 
 
