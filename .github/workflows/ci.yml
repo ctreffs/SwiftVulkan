@@ -19,10 +19,10 @@ jobs:
         uses: actions/cache@v2
         with:
           path: |
-            ~/Library/Caches/Homebrew/vulkan-sdk--*
-            ~/Library/Caches/Homebrew/downloads/*--vulkan-sdk-*
+            ~/Library/Caches/Homebrew/vulkansdk--*
+            ~/Library/Caches/Homebrew/downloads/*--vulkansdk-*
           key: ${{ runner.os }}-brew-vulkan-sdk-${{ hashFiles('.github/brew-formulae') }}
-          restore-keys: ${{ runner.os }}-brew-vulkan-sdk-
+          restore-keys: ${{ runner.os }}-brew-vulkansdk-
       - name: Restore cached SPM dependencies
         uses: actions/cache@v2
         with:
