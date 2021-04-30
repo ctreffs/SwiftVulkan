@@ -1,45 +1,28 @@
-lint:
-	swiftlint autocorrect --format
-	swiftlint lint --quiet
+.PHONY: lint-fix
+lint-fix:
+	swiftlint --fix
 
-lintErrorOnly:
-	@swiftlint autocorrect --format --quiet
-	@swiftlint lint --quiet | grep error
-
+.PHONY: copyVulkanPkgConfig
 copyVulkanPkgConfig:
 	cp vulkan.pc /usr/local/lib/pkgconfig/vulkan.pc
-	pkg-config --libs --cflags vulkan
+	-pkg-config --libs --cflags vulkan
 
+.PHONY: genLinuxTests
 genLinuxTests:
 	swift test --generate-linuxmain
-	swiftlint autocorrect --format --path Tests/
+	swiftlint --fix --path Tests/
 
-test: genLinuxTests
-	swift test
+.PHONY: test
+test:
+	swift test --skip-update --parallel
 
-clean:
-	swift package reset
-	rm -rdf .swiftpm/xcode
-	rm -rdf .build/
-	rm Package.resolved
-	rm .DS_Store
+.PHONY: build-release
+build-release:
+	swift build -c release
 
-cleanArtifacts:
-	swift package clean
+.PHONY: precommit
+precommit: lint-fix genLinuxTests
 
-genXcode:
-	swift package generate-xcodeproj --enable-code-coverage --skip-extra-files
-
-latest:
-	swift package update
-
-resolve:
-	swift package resolve
-
-genXcodeOpen: genXcode
-	open *.xcodeproj
-
-precommit: lint genLinuxTests
-
+.PHONY: testReadme
 testReadme:
 	markdown-link-check -p -v ./README.md
