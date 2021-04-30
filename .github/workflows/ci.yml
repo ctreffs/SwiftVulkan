@@ -78,5 +78,3 @@ jobs:
         run: make test
       - name: Build Release
         run: make build-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_FIREBLADE_ACCESS_TOKEN }}
