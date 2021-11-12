@@ -1,6 +1,5 @@
 module Vulkan [system] {
   umbrella header "shims.h"
   link "vulkan"
-  //link "MoltenVK"
   export *
 }

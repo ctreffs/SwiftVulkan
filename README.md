@@ -1,32 +1,28 @@
 # SwiftVulkan
 
-[![CI](https://github.com/ctreffs/SwiftVulkan/actions/workflows/ci.yml/badge.svg)](https://github.com/ctreffs/SwiftVulkan/actions/workflows/ci.yml)
+[![macOS](https://github.com/ctreffs/SwiftVulkan/actions/workflows/ci-macos.yml/badge.svg)](https://github.com/ctreffs/SwiftVulkan/actions/workflows/ci-macos.yml)
+[![Linux](https://github.com/ctreffs/SwiftVulkan/actions/workflows/ci-linux.yml/badge.svg)](https://github.com/ctreffs/SwiftVulkan/actions/workflows/ci-linux.yml)
 
 
-### macOS: Install Vulkan + setup 
+## Setup Vulkan SDK
 
-There is no official homebrew vulkan package yet.
-But there is a cask, that works great. <https://github.com/Homebrew/homebrew-cask/issues/51330>
+For this package to work [Vulkan SDK](https://www.lunarg.com/vulkan-sdk/) must be installed as a system package.
 
-Install vulkan cask
+### macOS - Homebrew
 
-```bash
-brew install --cask apenngrace/vulkan/vulkan-sdk
-```
-
-then copy vulkan.pc to pkg-config dir (since it does not have one yet).
-
-```bash
-make copyVulkanPkgConfig
-```
-
-### Linux: Install Vulkan
+To setup Vulkan SDK via [Homebrew](https://brew.sh/index_de), 
+create a pkg-config file and copy it to the right location just run:
 
 ```sh
-apt-get update -qq 
-apt-get install -y libvulkan-dev
-apt-get install -y libvulkan1
-apt-get install -y vulkan-utils
+make setup-vulkan-macOS
+```
+
+### Linux - APT
+
+To setup Vulkan SDK via APT just run:
+
+```sh
+make setup-vulkan-linux
 ```
 
 ### Others

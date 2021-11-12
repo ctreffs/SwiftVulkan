@@ -11,8 +11,8 @@ let package = Package(
         .systemLibrary(name: "Vulkan",
                        pkgConfig: "vulkan",
                        providers: [
-                        .brew(["vulkan-sdk"]), // <cask> apenngrace/vulkan/vulkan-sdk
-                        .apt(["libvulkan-dev", "libvulkan1", "vulkan-utils"]) // https://packages.ubuntu.com/source/vulkan
+                        .brew(["vulkan-sdk"]),
+                        .apt(["libvulkan-dev", "libvulkan1", "vulkan-utils"])
         ]),
         .testTarget(name: "VulkanTests",
                     dependencies: ["Vulkan"])
