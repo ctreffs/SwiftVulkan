@@ -1,23 +1,21 @@
 # SwiftVulkan
 
-[![CI](https://github.com/ctreffs/SwiftVulkan/actions/workflows/ci.yml/badge.svg)](https://github.com/ctreffs/SwiftVulkan/actions/workflows/ci.yml)
+[![macOS](https://github.com/ctreffs/SwiftVulkan/actions/workflows/ci-macos.yml/badge.svg)](https://github.com/ctreffs/SwiftVulkan/actions/workflows/ci-macos.yml)
+[![Linux](https://github.com/ctreffs/SwiftVulkan/actions/workflows/ci-linux.yml/badge.svg)](https://github.com/ctreffs/SwiftVulkan/actions/workflows/ci-linux.yml)
 
 
 ### macOS: Setup Vulkan SDK
 
-To setup Vulkan SDK via homebrew, create a pkg-config file and copy it to the right location just run
+To setup Vulkan SDK via [Homebrew](https://brew.sh/index_de), create a pkg-config file and copy it to the right location just run
 
 ```sh
-make setup-vulkan
+make setup-vulkan-macOS
 ```
 
 ### Linux: Install Vulkan SDK
 
 ```sh
-apt-get update -qq 
-apt-get install -y libvulkan-dev
-apt-get install -y libvulkan1
-apt-get install -y vulkan-utils
+make setup-vulkan-linux
 ```
 
 ### Others
