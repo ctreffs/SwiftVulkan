@@ -3,24 +3,15 @@
 [![CI](https://github.com/ctreffs/SwiftVulkan/actions/workflows/ci.yml/badge.svg)](https://github.com/ctreffs/SwiftVulkan/actions/workflows/ci.yml)
 
 
-### macOS: Install Vulkan + setup 
+### macOS: Setup Vulkan SDK
 
-There is no official homebrew vulkan package yet.
-But there is a cask, that works great. <https://github.com/Homebrew/homebrew-cask/issues/51330>
+To setup Vulkan SDK via homebrew, create a pkg-config file and copy it to the right location just run
 
-Install vulkan cask
-
-```bash
-brew install --cask apenngrace/vulkan/vulkan-sdk
+```sh
+make setup-vulkan
 ```
 
-then copy vulkan.pc to pkg-config dir (since it does not have one yet).
-
-```bash
-make copyVulkanPkgConfig
-```
-
-### Linux: Install Vulkan
+### Linux: Install Vulkan SDK
 
 ```sh
 apt-get update -qq 
