@@ -4,8 +4,9 @@ lint-fix:
 
 .PHONY: brew-install-vulkan
 brew-install-vulkan:
-	brew install vulkan-sdk
-	# brew install --cask apenngrace/vulkan/vulkan-sdk
+	brew update
+	# brew install vulkan-sdk
+	brew install --cask apenngrace/vulkan/vulkan-sdk
 
 .PHONY: setup-vulkan-macOS
 setup-vulkan-macOS: brew-install-vulkan
