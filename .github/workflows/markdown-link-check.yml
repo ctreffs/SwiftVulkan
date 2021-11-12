@@ -1,12 +1,17 @@
 name: Check markdown links
 
-on: push
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
 
 jobs:
   markdown-link-check:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@master
+      uses: actions/checkout@v2.4.0
     - name: markdown-link-check
-      uses: gaurav-nelson/github-action-markdown-link-check@master
+      uses: gaurav-nelson/github-action-markdown-link-check@1.0.13
