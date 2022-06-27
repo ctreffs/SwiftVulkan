@@ -5,6 +5,10 @@ lint-fix:
 .PHONY: brew-install-vulkan
 brew-install-vulkan:
 	brew update
+	sudo mkdir -p /usr/local/include/vulkan
+	sudo mkdir -p /usr/local/lib
+	sudo mkdir -p /usr/local/share
+	sudo chown -R $(whoami) /usr/local/*
 	# brew install vulkan-sdk
 	brew install --cask apenngrace/vulkan/vulkan-sdk
 
