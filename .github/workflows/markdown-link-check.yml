@@ -14,4 +14,4 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2.4.0
     - name: markdown-link-check
-      uses: gaurav-nelson/github-action-markdown-link-check@1.0.13
+      uses: gaurav-nelson/github-action-markdown-link-check@1.0.15
