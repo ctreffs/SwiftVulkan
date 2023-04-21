@@ -42,6 +42,7 @@ jobs:
         run: |
           brew tap apenngrace/homebrew-vulkan 
           brew update
+          brew upgrade
           mkdir -p /usr/local/include/vulkan
           mkdir -p /usr/local/lib
           mkdir -p /usr/local/share
