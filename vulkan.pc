@@ -4,6 +4,6 @@ includedir=${prefix}/include
 
 Name: vulkan
 Description: Vulkan SDK
-Version: 1.2.162
+Version: 1.2.170
 Libs: -L${libdir} -lvulkan
 Cflags: -I${includedir}
