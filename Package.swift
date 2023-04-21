@@ -12,7 +12,7 @@ let package = Package(
                        pkgConfig: "vulkan",
                        providers: [
                         .brew(["vulkan-sdk"]),
-                        .apt(["libvulkan-dev", "libvulkan1", "vulkan-utils"])
+                        .apt(["libvulkan-dev", "libvulkan1"])
         ]),
         .testTarget(name: "VulkanTests",
                     dependencies: ["Vulkan"])
