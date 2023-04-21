@@ -46,9 +46,9 @@ jobs:
           mkdir -p /usr/local/lib
           mkdir -p /usr/local/share
           brew install --cask vulkan-sdk
-          sed -i '' 's/Version:.*/Version: $(shell vulkaninfo --summary | tail -n +5 | head -n 1 | cut -c26-)/' vulkan.pc
-          cp vulkan.pc $(shell brew --prefix)/lib/pkgconfig/vulkan.pc
-          pkg-config --libs --cflags vulkan
+          #sed -i '' 's/Version:.*/Version: $(shell vulkaninfo --summary | tail -n +5 | head -n 1 | cut -c26-)/' vulkan.pc
+          #cp vulkan.pc $(shell brew --prefix)/lib/pkgconfig/vulkan.pc
+          #pkg-config --libs --cflags vulkan
       
       - name: Test
         run: swift test --parallel
